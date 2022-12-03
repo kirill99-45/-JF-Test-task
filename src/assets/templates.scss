@@ -1,0 +1,69 @@
+@import './variables';
+
+%tpl-text-ellipsis {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%tpl-company {
+    color: $company-color;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+%tpl-h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $main-color;
+}
+
+%tpl-h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: $secondary-color;
+}
+
+@mixin custom-hidden-scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: inherit;
+    border-radius: 10px;
+
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+}
+
+@mixin custom-scroll-bar() {
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      height: 10px;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      border-radius: 10px;
+      height: 10px;
+      background: $company-color;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #999;
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+
