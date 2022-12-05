@@ -1,0 +1,27 @@
+%tpl-text-ellipsis {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%tpl-company {
+    color: $company-color;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+%tpl-h2 {
+    font-size: 1em;
+    font-weight: 600;
+    color: $main-color;
+    white-space: nowrap;
+}
+
+%tpl-h3 {
+    font-size: 0.875em;
+    font-weight: 400;
+    color: $secondary-color;
+    white-space: nowrap;
+}

@@ -1,36 +1,35 @@
 <template>
-  <div class='app'>
-    <Header />
-    <div class="wrapper">
+    <MainHeader />
+    <div class="content">
       <Search />
-      <User v-if="activeUser !== null" />
-      <h3 class="user-select" v-else>Выберите сотрудника, чтобы посмотреть его профиль</h3>
+      <User/>
     </div>
-  </div>
 </template>
 
 <script>
-import Header from '@/components/header/Header.vue';
+
+import MainHeader from '@/components/header/Header.vue';
 import Search from '@/components/sidebar/Search.vue';
 import User from '@/components/user-profile/User.vue';
 import { mapGetters } from 'vuex';
 
 export default {
   components: {
-    Header,
+    MainHeader,
     Search,
     User,
   },
   computed: {
     ...mapGetters({
-      activeUser : 'users/activeUser',
-    })
+      activeUser: 'users/activeUser',
+    }),
   },
 }
+
 </script>
 
 <style lang="scss">
-@import './assets/styles.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 * {
@@ -42,17 +41,14 @@ export default {
 #app {
   position: fixed;
   top: 0px;
-  left: 50px;
-  right: 50px;
+  left: 3.125em;
+  right: 3.125em;
   bottom: 0px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   font-family: Monserrat;
 
-  .wrapper {
+  .content {
     height: 85vh;
     overflow: hidden;
     display: flex;
@@ -61,18 +57,21 @@ export default {
     border-radius: 10px;
     position: relative;
     width: 100%;
-
-    .user-select {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px 30px 20px 22px;
-      border-left: 1px solid #E0E0E0;
-      width: 70%;
-      color: $secondary-color;
-      @extend %tpl-h3;
-    }
   }
-
 }
+
+/*-- MEDIA --*/
+
+@media (max-width: $breakpoint-tablet) {
+  #app {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  #app {
+    font-size: 12px;
+  }
+}
+
 </style>

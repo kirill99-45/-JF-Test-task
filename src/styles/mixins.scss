@@ -1,0 +1,40 @@
+@mixin custom-hidden-scroll-bar() {
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      height: 10px;
+      width: 4px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: inherit;
+      border-radius: 10px;
+  
+    }
+  
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+  
+  @mixin custom-scroll-bar() {
+      &::-webkit-scrollbar {
+        border-radius: 10px;
+        height: 10px;
+        width: 4px;
+      }
+  
+      &::-webkit-scrollbar-thumb:hover {
+        border-radius: 10px;
+        height: 10px;
+        background: $company-color;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 10px;
+      }
+    
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+    }

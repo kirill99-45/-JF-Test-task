@@ -8,29 +8,34 @@
 <script>
 
 export default {
-
 }
 
 </script>
 
-<style lang="scss">
-@import '@/assets/styles.scss';
-    
-    .app__header {
-        display: flex;
-        justify-content: space-between;
-        padding: 30px 0px;
-        align-items: center;
+<style lang="scss" scoped>
+.app__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.875em 0px;
+    align-items: center;
 
-        h1 {
-            @extend %tpl-company
-        }
-
-        h2 {
-            color: $main-color;
-            font-size: 16px;
-            font-weight: 400;
-        }
+    h1 {
+        @extend %tpl-company;
     }
+
+    h2 {
+        color: $main-color;
+        font-size: 1em;
+        font-weight: 400;
+    }
+}
+
+/*-- MEDIA --*/ 
+
+@media (max-width: $breakpoint-mobile-mini) {
+    .app__header {
+        font-size: 12px;
+    }
+}
 
 </style>

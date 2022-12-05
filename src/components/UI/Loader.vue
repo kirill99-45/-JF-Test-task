@@ -11,14 +11,12 @@
 <script>
 
 export default {
-
+    name : 'loader',
 }
 
 </script>
 
 <style lang='scss' scoped>
-@import '@/assets/styles.scss';
-
 .loader__wrapper {
     position: absolute;
     z-index: 1;
@@ -45,7 +43,6 @@ export default {
         background: $company-color;
         animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
     }
-
     .lds-facebook div:nth-child(1) {
         left: 8px;
         animation-delay: -0.24s;
@@ -73,6 +70,6 @@ export default {
             height: 32px;
         }
     }
-
 }
+
 </style>
