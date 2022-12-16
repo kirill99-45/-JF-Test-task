@@ -1,20 +1,20 @@
 <template>
     <div :class="[ activeUser === null ? 'search__wrapper' : 'search__wrapper hidden' ]">
         <header>
-            <h2 class="search__title">Поиск сотрудников</h2>
-            <input type="text" placeholder="Введите Id или имя" :value="searchQuery" @input="updateQuery" />
-            <h3 class="result__title">Результаты</h3>
+            <h2 class="search__title">Search</h2>
+            <input type="text" placeholder="Enter id or name" :value="searchQuery" @input="updateQuery" />
+            <h3 class="result__title">Results</h3>
         </header>
         <main class="search__result-wrapper">
             <h4 v-if="searchQuery.length === 0 && !isUsersLoading && !allUsers.length" >
-                начните поиск
+                Let't start
             </h4>
             <template v-else>
                 <ul class="result__users" v-if="allUsers.length > 0">
                     <UserCard :users="allUsers" />
                 </ul>
                 <h4 v-else-if="searchBadRequest.length > 0" class="result__title">{{ searchBadRequest }}</h4>
-                <h4 class="result__title" v-else-if="!isUsersLoading">ничего не найдено </h4>
+                <h4 class="result__title" v-else-if="!isUsersLoading">There are nothing...</h4>
             </template>
             <Loader v-if="isUsersLoading" />
         </main>
@@ -107,7 +107,6 @@ $padding: 0.625em 1.875em 1.25em 1.25em;
             @extend %tpl-h3
         }
     }
-
     .search__result-wrapper {
         padding: $padding;
         height: 37.5em;
@@ -126,11 +125,9 @@ $padding: 0.625em 1.875em 1.25em 1.25em;
             text-align: left;
         }
 
-
         &:hover {
             @include custom-scroll-bar;
         }
-
         .result__users {
             display: flex;
             flex-direction: column;

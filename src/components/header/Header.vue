@@ -1,7 +1,7 @@
 <template>
     <header class="app__header">
-        <h1>Жилфонд</h1>
-        <h3>Пользователь</h3>
+        <h1>CompanyName</h1>
+        <h3>User</h3>
     </header>
 </template>
 

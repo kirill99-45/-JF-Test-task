@@ -27,7 +27,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-
     .lds-facebook {
         display: inline-block;
         position: relative;

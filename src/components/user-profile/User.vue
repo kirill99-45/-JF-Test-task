@@ -17,7 +17,7 @@
             <p class="user__about">{{ this.text }}</p>
         </div>
     </div>
-    <h3 class="user__select" v-else>Выберите сотрудника, чтобы посмотреть его профиль</h3>
+    <h3 class="user__select" v-else>Select a user to view his profile</h3>
 </template>
 
 <script>
@@ -79,7 +79,6 @@ export default {
             object-fit: contain;
         }
     }
-
     .user__info {
         width: 60%;
         display: flex;
@@ -113,7 +112,6 @@ export default {
         }
     }
 }
-
 .user__select {
     display: flex;
     justify-content: center;
@@ -129,11 +127,9 @@ export default {
 /* --- MEDIA --- */
 
 @media (max-width: $breakpoint-tablet) {
-
     .user__select {
         display: none;
     }
-
     .user__wrapper {
         font-size: 14px;
         flex-direction: column;
@@ -147,7 +143,6 @@ export default {
             padding-bottom: 0.313em;
             border-bottom: 1px solid #e0e0e0;
         }
-
         .btn-icon {
             background: #e0e0e0;
             border: none;
@@ -161,16 +156,13 @@ export default {
                 object-fit: contain;
             }
         }
-
         &.active {
             display: flex;
             width: 100%;
         }
-
         .user__img {
             width: 100%;
         }
-
         .user__info {
             width: 100%;
             align-items: flex-start;
@@ -183,6 +175,5 @@ export default {
     .user-select {
         display: none;
     }
-
 }
 </style>
